@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake and Ladder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Snake and Ladder</h1>
+      <div class="controls">
+        <button id="resetBtn" title="Restart game">Reset</button>
+        <div class="turn">Turn: <span id="turnLabel">Player 1</span></div>
+        <button id="rollBtn" class="primary">Roll Dice</button>
+        <div class="dice" id="dice">-</div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="left">
+        <div class="board-wrap">
+          <div id="board" class="board" aria-label="Game board"></div>
+          <svg id="overlay" class="overlay" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
+        </div>
+      </section>
+      <aside class="right">
+        <h2>Legend</h2>
+        <ul class="legend">
+          <li><span class="token token-p1"></span> Player 1</li>
+          <li><span class="token token-p2"></span> Player 2</li>
+          <li><span class="legend-snake"></span> Snake tail → head</li>
+          <li><span class="legend-ladder"></span> Ladder bottom → top</li>
+        </ul>
+        <h2>Rules</h2>
+        <ul class="rules">
+          <li>Roll 1–6 and move forward.</li>
+          <li>Land on a ladder base to climb.</li>
+          <li>Land on a snake head to slide down.</li>
+          <li>Must land exactly on 100 to win.</li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <span>Have fun! 🎲</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
