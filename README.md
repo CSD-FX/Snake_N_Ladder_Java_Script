@@ -6,20 +6,10 @@ Simple, single-page Snake and Ladder for 2 players. Open `index.html` in a brows
 - Open the folder `snake-ladders-js/`.
 - Double-click `index.html` to open in your browser.
 
-## Rules
-- Roll 1–6 to move forward.
-- Land on ladder base to climb; land on snake head to slide down.
-- You must land exactly on 100 to win (overshoot = no move).
-
 ## Files
 - `index.html` – page layout and controls.
 - `style.css` – board and UI styling.
 - `script.js` – game logic (board generation, turns, dice, snakes/ladders, win).
-
-## Animations
-- Snakes and ladders are rendered as SVG paths in `index.html` overlay (`<svg id="overlay">`).
-- When you land on a snake/ladder, the token animates along the path (see `animateTeleport()` in `script.js`).
-- Paths redraw responsively on resize.
 
 ---
 
@@ -101,6 +91,4 @@ docker run -d -p 8080:80 --name snake-ladders <dockerhub-username>/snake-ladders
 ```
 
 ## Notes
-- Static hosting is served by Nginx configured in `nginx.conf`.
-- Docker context is controlled by `.dockerignore`.
-- Modify snakes/ladders mapping in `teleports` inside `script.js`.
+- Static hosting is served by Nginx
